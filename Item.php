@@ -1,12 +1,12 @@
 <?php
 class Item {
-    public $name;
-    public $num;
-    public $desc;
-    public $cat;
-    public $dep;
-    public $price;
-    public $retcost;
+    public $name; //Item name
+    public $num; //Item number
+    public $desc; //Item Description
+    public $cat; //Item Category
+    public $dep; //Item Department
+    public $price; //Item Price
+    public $retcost; //Incurred Retailer Cost
 
     function Create($name, $num, $desc, $cat, $dep, $price, $retcost) {
         $this->name = $name;
