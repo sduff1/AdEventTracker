@@ -6,7 +6,7 @@ class Item {
     public $type;
     public $code;
 
-    public function __construct($name,$description,$amountOff,$department,$cost,$retailCost)
+    public function __construct($name,$description,$amountOff,$department,$cost)
     {
         $this->name=$name;
         $this->description=$description;
