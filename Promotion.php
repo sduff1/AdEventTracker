@@ -1,5 +1,5 @@
 <?php
-class Item {
+class Promotion {
     public $name;
     public $description;
     public $amountOff;
