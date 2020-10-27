@@ -6,13 +6,13 @@ class Promotion {
     public $type;
     public $code;
 
-    public function __construct($name,$description,$amountOff,$department,$cost)
+    public function __construct($name,$description,$amountOff,$type,$code)
     {
         $this->name=$name;
         $this->description=$description;
         $this->amountOff=$amountOff;
-        $this->department=$department;
-        $this->cost=$cost;
+        $this->type=$type;
+        $this->code=$code;
     }
 
     public function getName()
