@@ -13,7 +13,6 @@ class Promotion {
         $this->amountOff=$amountOff;
         $this->department=$department;
         $this->cost=$cost;
-        $this->retailCost=$retailCost;
     }
 
     public function getName()
