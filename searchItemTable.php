@@ -9,6 +9,10 @@ $cat =  $_SESSION['category'];
 $dept = $_SESSION['department_name'];
 $cost =  $_SESSION['purchase_cost'];
 $retailCost = $_SESSION['full_retail_cost'];
+
+
+//HTML file creates a table
+//Populated with elements from database
 ?>
 
 <!doctype html>

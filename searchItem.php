@@ -18,8 +18,8 @@ if(isset($_POST['submit'])){
 
     //Fetch data
     $post = mysqli_fetch_assoc($result);
-    //var_dump($post);
 
+    //Get specific data from database
     $number = $post['item_number'];
     $desc = $post['item_description'];
     $cat = $post['category'];
@@ -27,6 +27,7 @@ if(isset($_POST['submit'])){
     $purchaseCost= $post['purchase_cost'];
     $retailCost= $post['full_retail_price'];
 
+    //Create session variable to be used in searchItemTable.php
     $_SESSION['item_number'] = $number;
     $_SESSION['item_description'] = $desc;
     $_SESSION['category'] = $cat;

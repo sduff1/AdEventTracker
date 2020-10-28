@@ -26,7 +26,7 @@ require('includes/header.php');
 
         <form method="POST" action="searchItemForm.php">
 
-            <label>Enter Item Number</label>
+            <label>Enter the Item Number of Item</label>
             <input type = "text" name="number-search" class="form-control">
 
             <p></p>
