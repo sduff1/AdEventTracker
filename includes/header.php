@@ -28,6 +28,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="updateItemForm.php">Update Item</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="searchItemForm.php">Search Item</a>
+            </li>
         </ul>
     </div>
 </nav>
