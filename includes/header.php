@@ -31,6 +31,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="searchItemForm.php">Search Item</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="addPromotionForm.php">Add promotion</a>
+            </li>
         </ul>
     </div>
 </nav>
