@@ -18,6 +18,46 @@ require('addItem.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add an Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script type = "text/javascript">
+        // Form validation for the following fields will come below ex. number,description etc.
+        function tvalidate() {
+            if (document.myForm.number.value == "") {
+                alert("Please provide the item number!");
+                document.myForm.Name.focus();
+                return false;
+            }
+
+            if (document.myForm.description.value == "") {
+                alert("Please provide the item description!");
+                document.myForm.Name.focus();
+                return false;
+            }
+
+            if (document.myForm.category.value == "") {
+                alert("Please provide the category!");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.department.value == "") {
+                alert("Please provide the department!");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.cost.value == "") {
+                alert("Please provide the item cost!");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.number.value == "") {
+                alert("Please provide the items' full retail cost!");
+                document.myForm.Name.focus();
+                return false;
+            }
+
+            return (true);
+        }
+    </script>
 </head>
 <body>
 <div class ="container">
@@ -26,7 +66,7 @@ require('addItem.php');
 
         <h1>Add an Item</h1>
 
-        <form method="POST" action="addItemForm.php">
+        <form method="POST" action="addItemForm.php" name ="myForm" onsubmit = "return(tvalidate());">
 
             <label>Item Number</label>
             <input type = "text" name="number" class="form-control">
