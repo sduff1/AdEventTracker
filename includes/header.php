@@ -34,6 +34,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="addPromotionForm.php">Add promotion</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="addAdEventForm.php">Add Ad Event</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="updateAdEventForm.php">Update Ad Event</a>
+            </li>
         </ul>
     </div>
 </nav>
