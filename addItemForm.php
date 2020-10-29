@@ -22,41 +22,44 @@ require('addItem.php');
     <script type = "text/javascript">
         // Form validation for the following fields will come below ex. number,description etc.
         function tvalidate() {
+
             if (document.myForm.number.value == "") {
                 alert("Please provide the item number!");
-                document.myForm.Name.focus();
+                document.myForm.number.focus();
                 return false;
             }
 
             if (document.myForm.description.value == "") {
                 alert("Please provide the item description!");
-                document.myForm.Name.focus();
+                document.myForm.description.focus();
                 return false;
             }
 
             if (document.myForm.category.value == "") {
                 alert("Please provide the category!");
-                document.myForm.Name.focus();
+                document.myForm.category.focus();
                 return false;
             }
             if (document.myForm.department.value == "") {
                 alert("Please provide the department!");
-                document.myForm.Name.focus();
+                document.myForm.department.focus();
                 return false;
             }
             if (document.myForm.cost.value == "") {
                 alert("Please provide the item cost!");
-                document.myForm.Name.focus();
+                document.myForm.cost.focus();
                 return false;
             }
             if (document.myForm.number.value == "") {
                 alert("Please provide the items' full retail cost!");
-                document.myForm.Name.focus();
+                document.myForm.number.focus();
                 return false;
             }
 
             return (true);
         }
+
+
     </script>
 </head>
 <body>
@@ -96,5 +99,3 @@ require('addItem.php');
 
 </body>
 </html>
-
-
