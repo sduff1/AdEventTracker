@@ -13,6 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ad Event Tracker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/de81de044b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/mainstyle.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -23,22 +26,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="addItemForm.php">Add Item <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="addItemForm.php"><i class="far fa-plus-square"></i> Add Item <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="updateItemForm.php">Update Item</a>
+                <a class="nav-link" href="updateItemForm.php"><i class="far fa-edit"></i> Update Item</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="searchItemForm.php">Search Item</a>
+                <a class="nav-link" href="searchItemForm.php"><i class="fas fa-search"></i> Search Item</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="addPromotionForm.php">Add promotion</a>
+                <a class="nav-link" href="addPromotionForm.php"><i class="fas fa-cart-plus"></i> Add promotion</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="addAdEventForm.php">Add Ad Event</a>
+                <a class="nav-link" href="addAdEventForm.php"><i class="fas fa-file-invoice-dollar"></i> Add Ad Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="updateAdEventForm.php">Update Ad Event</a>
+                <a class="nav-link" href="updateAdEventForm.php"><i class="fas fa-sync"></i> Update Ad Event</a>
             </li>
         </ul>
     </div>
