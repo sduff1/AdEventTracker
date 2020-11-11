@@ -6,8 +6,9 @@ class Item {
     public $department;
     public $cost;
     public $retailCost;
+    public $promocode;
 
-    public function __construct($itemNumber,$description,$category,$department,$cost,$retailCost)
+    public function __construct($itemNumber,$description,$category,$department,$cost,$retailCost,$promocode)
     {
         $this->itemNumber=$itemNumber;
         $this->description=$description;
@@ -15,6 +16,7 @@ class Item {
         $this->department=$department;
         $this->cost=$cost;
         $this->retailCost=$retailCost;
+        $this->promocode=$promocode;
     }
 
     public function getItemNumber()
@@ -75,6 +77,15 @@ class Item {
     public function setRetailCost($retailCost): void
     {
         $this->retailCost = $retailCost;
+    }
+    public function getPromocode()
+    {
+        return $this->promocode;
+    }
+
+    public function setPromocode($promocode): void
+    {
+        $this->promocode = $promocode;
     }
 
 
