@@ -14,9 +14,10 @@ if(isset($_POST['submit'])) {
     $department = mysqli_real_escape_string($conn, $_POST['department']);
     $cost = mysqli_real_escape_string($conn, $_POST['cost']);
     $retail_cost = mysqli_real_escape_string($conn, $_POST['retail_cost']);
+    $promocode = mysqli_real_escape_string($conn, $_POST['promocode']);
 
     //Create Item object from data collected
-    $product = new Item("$number", "$description", "$category", "$department", "$cost", "$retail_cost");
+    $product = new Item("$number", "$description", "$category", "$department", "$cost", "$retail_cost", "$promocode");
 
     //Getter methods to retrieve properties of the Object created
     $item_num = $product->getItemNumber();
@@ -25,9 +26,10 @@ if(isset($_POST['submit'])) {
     $item_dept= $product->getDepartment();
     $item_cost = $product->getCost();
     $item_rtl_cost= $product->getRetailCost();
+    $ipromocode= $product->getPromocode();
 
     //Updates row in the item table where the item_number in table matches the Item Number provided by the user
-    $query = "UPDATE item SET item_description='$item_desc',category = '$item_cat', department_name = '$item_dept', purchase_cost = '$item_cost', full_retail_price='$item_rtl_cost' WHERE item_number = {$item_num}";
+    $query = "UPDATE produce.item SET item_description='$item_desc',category = '$item_cat', department_name = '$item_dept', purchase_cost = '$item_cost', full_retail_price='$item_rtl_cost', promocode='$ipromocode' WHERE item_number = {$item_num}";
 
     //Alerts user that the item has been updated
     echo'<script>alert("Item has been updated")</script>';
