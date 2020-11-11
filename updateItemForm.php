@@ -19,23 +19,6 @@ require('updateItem.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script type = "text/javascript">
-        // Form validation for the following fields will come below ex. number,description etc.
-        function tvalidate() {
-//Only including validation for an empty item number because it is the only necessary one to start with..
-            if (document.myForm.number.value == "") {
-                alert("Please provide the item number!");
-                document.myForm.number.focus();
-                return false;
-            }
-
-
-            return (true);
-        }
-
-
-    </script>
-
 </head>
 <body>
 <div class ="container">
@@ -44,7 +27,7 @@ require('updateItem.php');
 
         <h1>Update an Item</h1>
 
-        <form method="POST" action="updateItemForm.php" name ="myForm" onsubmit = "return(tvalidate());">
+        <form method="POST" action="updateItemForm.php">
 
             <label>Enter Item Number of Item You Wish To Update</label>
             <input type = "text" name="number" class="form-control">
@@ -63,6 +46,9 @@ require('updateItem.php');
 
             <label>Item Full Retail Cost</label>
             <input type = "text" name="retail_cost" class="form-control">
+
+            <label>Promocode</label>
+            <input type = "text" name="promocode" class="form-control">
 
             <p></p>
 

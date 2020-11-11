@@ -57,4 +57,3 @@ require('updateAdEvent.php');
 
 </body>
 </html>
-

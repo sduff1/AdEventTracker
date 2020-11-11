@@ -8,7 +8,7 @@ $desc = $_SESSION['Description'];
 $aOff =  $_SESSION['AmountOff'];
 $type = $_SESSION['Type'];
 $code =  $_SESSION['Code'];
-
+$event =  $_SESSION['Event'];
 
 //HTML file creates a table
 //Populated with elements from database
@@ -33,6 +33,7 @@ $code =  $_SESSION['Code'];
         <th scope="col">Amount Off</th>
         <th scope="col">Type</th>
         <th scope="col">Code</th>
+        <th scope="col">Event</th>
 
     </tr>
     </thead>
@@ -43,6 +44,7 @@ $code =  $_SESSION['Code'];
         <td><?php echo $aOff?></td>
         <td><?php echo $type?></td>
         <td><?php echo $code?></td>
+        <td><?php echo $event?></td>
     </tbody>
 </table>
 </body>

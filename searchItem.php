@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     ///echo $number;
 
     //Create query
-    $query = "SELECT * FROM item WHERE item_number = {$number}";
+    $query = "SELECT * FROM produce.item WHERE item_number = {$number}";
 
     //Get result
     $result = mysqli_query($conn,$query);
@@ -26,6 +26,7 @@ if(isset($_POST['submit'])){
     $dept = $post['department_name'];
     $purchaseCost= $post['purchase_cost'];
     $retailCost= $post['full_retail_price'];
+    $promocode= $post['promocode'];
 
     //Create session variable to be used in searchItemTable.php
     $_SESSION['item_number'] = $number;
@@ -34,12 +35,10 @@ if(isset($_POST['submit'])){
     $_SESSION['department_name'] = $dept;
     $_SESSION['purchase_cost'] = $purchaseCost;
     $_SESSION['full_retail_cost'] = $retailCost;
+    $_SESSION['promocode'] = $promocode;
 
 
     require('searchItemTable.php');
 
 }
 ?>
-
-
-

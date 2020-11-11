@@ -1,19 +1,17 @@
 <?php
 class AdEvent {
     public $eventCode;
-    public $name;
+    public $description;
     public $startDate;
     public $endDate;
-    public $description;
     public $type;
 
-    public function __construct($eventCode,$name,$startDate,$endDate,$description,$type)
+    public function __construct($eventCode,$description,$startDate,$endDate,$type)
     {
         $this->eventCode=$eventCode;
-        $this->name=$name;
+        $this->description=$description;
         $this->startDate=$startDate;
         $this->endDate=$endDate;
-        $this->description=$description;
         $this->type=$type;
     }
 
@@ -27,14 +25,14 @@ class AdEvent {
         $this->eventCode = $eventCode;
     }
 
-    public function getName()
+    public function getDescription()
     {
-        return $this->name;
+        return $this->description;
     }
 
-    public function setName($name): void
+    public function setDescription($description): void
     {
-        $this->name = $name;
+        $this->description = $description;
     }
 
     public function getStartDate()
@@ -42,11 +40,10 @@ class AdEvent {
         return $this->startDate;
     }
 
-    public function setStartDate()
+    public function setCategory($startDate): void
     {
-        $this->startDate;
+        $this->category = $startDate;
     }
-
 
     public function getEndDate()
     {
@@ -56,16 +53,6 @@ class AdEvent {
     public function setEndDate($endDate): void
     {
         $this->endDate = $endDate;
-    }
-
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    public function setDescription($description): void
-    {
-        $this->description = $description;
     }
 
     public function getType()
