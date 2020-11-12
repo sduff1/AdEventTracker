@@ -19,6 +19,48 @@ require('addAdEvent.php');
     <title>Add Ad Event </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script type = "text/javascript">
+        // Form validation for the following fields will come below ex. number,description etc.
+        function tvalidate() {
+
+            if (document.myForm.event_code.value == "") {
+                alert("Please provide the event code!");
+                document.myForm.event_code.focus();
+                return false;
+            }
+
+            if (document.myForm.name.value == "") {
+                alert("Please provide the name!");
+                document.myForm.name.focus();
+                return false;
+            }
+
+            if (document.myForm.start_date.value == "") {
+                alert("Please provide the start date!");
+                document.myForm.start_date.focus();
+                return false;
+            }
+            if (document.myForm.end_date.value == "") {
+                alert("Please provide the end date!");
+                document.myForm.end_date.focus();
+                return false;
+            }
+            if (document.myForm.description.value == "") {
+                alert("Please provide the description!");
+                document.myForm.description.focus();
+                return false;
+            }
+            if (document.myForm.type.value == "") {
+                alert("Please provide the type!");
+                document.myForm.type.focus();
+                return false;
+            }
+
+            return (true);
+        }
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -27,7 +69,7 @@ require('addAdEvent.php');
 
         <h1>Add Ad Event</h1>
 
-        <form method="POST" action="addAdEventForm.php">
+        <form method="POST" action="addAdEventForm.php"  name ="myForm" onsubmit = "return(tvalidate());">
 
             <label>Event Code:</label>
             <input type="text" name="event_code" class="form-control">
@@ -57,4 +99,3 @@ require('addAdEvent.php');
 
 </body>
 </html>
-
