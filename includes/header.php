@@ -51,8 +51,8 @@
                     Promotion
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="addItemForm.php"><i class="fas fa-cart-plus"></i> Add Promotion</a>
-                    <a class="dropdown-item" href="updateItemForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
+                    <a class="dropdown-item" href="addPromotionForm.php"><i class="fas fa-cart-plus"></i> Add Promotion</a>
+                    <a class="dropdown-item" href="updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
                 </div>
             </li>
 
