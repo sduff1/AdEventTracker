@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin:0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+    color: #4f2f02;
+    line-height:1.6;
+}
+
+#showcase{
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#section-a{
+    padding: 20px;
+    background: #1E160E;
+    color: #fff;
+    text-align: center;
+}
