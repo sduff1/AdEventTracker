@@ -2,7 +2,7 @@
 //Need the connection to the server and database which is why it requires database.php
 require('configuration/database.php');
 
-session_start();
+//session_start();
 
 
 //if submit has been clicked

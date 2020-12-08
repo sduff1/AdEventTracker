@@ -46,11 +46,12 @@ if(isset($_POST['submit'])) {
         echo'<script>alert("Could not add Item! Item is already in system.")</script>';
     }else{
         //If there is no row, then it will process the query
-        $query = "INSERT INTO promotion(Name, Description, AmountOff, Type, Code) VALUES('$pname', '$pdesc','$paOff','$ptype', '$pcode')";
+        $query = "INSERT INTO promotion(Name, Description, AmountOff, PromoType, PromoCode) VALUES('$pname', '$pdesc','$paOff','$ptype', '$pcode')";
         echo '<script>alert("Promotion has been added!")</script>';
-        if (!mysqli_query($conn, $query)){
-            echo "Error: '.mysqli_error($conn)";
-        }
+    }
+
+    if (!mysqli_query($conn, $query)){
+        echo "Error: '.mysqli_error($conn)";
     }
 
 }

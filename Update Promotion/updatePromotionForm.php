@@ -1,7 +1,7 @@
 <?php
-require('configuration/database.php');
-require('includes/header.php');
-require('UpdatePromotion.php');
+require('../configuration/database.php');
+require('promotionHeader.php');
+require('UpdateGetPromoValues.php');
 
 /**
  *HTML file to accept user form data
@@ -31,18 +31,6 @@ require('UpdatePromotion.php');
 
             <label>Enter Promo Code of the Promotion You Wish To Update</label>
             <input type = "text" name="code" class="form-control">
-			
-			<label>Name:</label>
-            <input type = "text" name="name" class="form-control">
-
-            <label>Description:</label>
-            <input type = "text" name="description" class="form-control">
-
-            <label>Amount Off:</label>
-            <input type = "text" name="amountOff" class="form-control">
-
-            <label>Type:</label>
-            <input type = "text" name="type" class="form-control">
 
             <p></p>
 

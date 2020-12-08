@@ -1,9 +1,9 @@
 <?php
 //Need the connection to the server and database which is why it requires database.php
-require ('configuration/database.php');
+require('../configuration/database.php');
 
 //Needs the item.php to create Item object
-require ('item.php');
+require('../item.php');
 
 //if submit has been clicked
 if(isset($_POST['submit'])) {
@@ -35,6 +35,8 @@ if(isset($_POST['submit'])) {
     if (!mysqli_query($conn, $query)){
         echo "Error: '.mysqli_error($conn)";
     }
+
+    require('updateItemForm.php');
 
 }
 

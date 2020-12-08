@@ -1,7 +1,7 @@
 <?php
-require('configuration/database.php');
-require('includes/header.php');
-require('updateItem.php');
+require('../configuration/database.php');
+require('headerTest.php');
+require('updateGetItemValues.php');
 
 /**
  *HTML file to accept user form data
@@ -21,7 +21,7 @@ require('updateItem.php');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script type = "text/javascript">
         // Form validation for the following fields will come below ex. number,description etc.
-        function tvalidate() {
+        function validate() {
 //Only including validation for an empty item number because it is the only necessary one to start with..
             if (document.myForm.number.value == "") {
                 alert("Please provide the item number!");
@@ -44,29 +44,15 @@ require('updateItem.php');
 
         <h1>Update an Item</h1>
 
-        <form method="POST" action="updateItemForm.php" name ="myForm" onsubmit = "return(tvalidate());">
+        <form method="POST" action="updateItemForm.php" name ="myForm" onsubmit = "return(validate());">
 
             <label>Enter Item Number of Item You Wish To Update</label>
             <input type = "text" name="number" class="form-control">
 
-            <label>Item Description</label>
-            <input type = "text" name="description" class="form-control">
-
-            <label>Item Category</label>
-            <input type = "text" name="category" class="form-control">
-
-            <label>Item Department Name</label>
-            <input type = "text" name="department" class="form-control">
-
-            <label>Item Purchase Cost</label>
-            <input type = "text" name="cost" class="form-control">
-
-            <label>Item Full Retail Cost</label>
-            <input type = "text" name="retail_cost" class="form-control">
-
             <p></p>
+            <input type = "submit" name = "submit" value ="Submit" class="btn btn-primary">
 
-            <input type="submit" name="submit" value="Submit" class="btn btn-danger">
+<!--            <input type="submit" name="submit" value="Submit" class="btn btn-danger">-->
 
         </form>
     </div>

@@ -1,6 +1,6 @@
 <?php
-    require ('configuration/database.php');
-    require ('includes/header.php');
+    require('configuration/database.php');
+    require('includes/header.php');
 
 /**
  * Homepage of the site
