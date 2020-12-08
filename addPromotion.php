@@ -33,7 +33,6 @@ if(isset($_POST['submit'])) {
     $ptype= $product->getType();
     $pcode = $product->getCode();
 
-
     //Get the elements from item_number column from item table, that matches the number provided by the user in the Item Number field of addItemForm.php
     $check = mysqli_query($conn,"SELECT * from promotion WHERE Name='$pname'");
 

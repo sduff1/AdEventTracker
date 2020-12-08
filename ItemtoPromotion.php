@@ -5,14 +5,12 @@ class ItemtoPromotion
     Public $id;
     public $promoCode;
     public $itemNumber;
-    public $salePrice;
 
-    public function __construct($id, $promoCode, $itemNumber, $salePrice)
+    public function __construct($id, $promoCode, $itemNumber)
     {
         $this->id=$id;
         $this->promoCode=$promoCode;
         $this->itemNumber=$itemNumber;
-        $this->salePrice=$salePrice;
 
     }
 
@@ -44,15 +42,5 @@ class ItemtoPromotion
     public function setItemNumber($itemNumber): void
     {
         $this->itemNumber = $itemNumber;
-    }
-
-    public function getSalePrice()
-    {
-        return $this->salePrice;
-    }
-
-    public function setSalePrice($salePrice): void
-    {
-        $this->salePrice = $salePrice;
     }
 }

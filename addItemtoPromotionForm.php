@@ -39,9 +39,6 @@ require('addItemtoPromotion.php');
             <label>Item Number:</label>
             <input type="text" name="itemNumber" class="form-control">
 
-            <label>Sale Price:</label>
-            <input type="text" name="salePrice" class="form-control">
-
             <p></p>
 
             <input type="submit" name="submit" value="Submit" class="btn btn-primary">

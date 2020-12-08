@@ -75,8 +75,15 @@ require('addPromotion.php');
             <label>Amount Off</label>
             <input type = "text" name="amountOff" class="form-control">
 
+            <br>
+
             <label>Type</label>
-            <input type = "text" name="type" class="form-control">
+            <select name="type" id="type">
+                <option value="Dollar">Dollar</option>
+                <option value="Percent">Percent</option>
+            </select>
+
+            <br>
 
             <label>Promo Code</label>
             <input type = "text" name="code" class="form-control">

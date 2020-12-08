@@ -39,7 +39,7 @@ $promoCode =  $_SESSION['PromoCode'];
             <label>Amount Off</label>
             <input value = "<?php echo $amountOff?>" name="amountOff" class="form-control">
 
-            <label>Promo Type</label>
+            <label>Promotion Type(Must be Percent or Dollar)</label>
             <input value = "<?php echo $promoType?>" name="promoType" class="form-control">
 
 

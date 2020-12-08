@@ -55,8 +55,6 @@
 
                     <a class="dropdown-item" href="update Promotion/updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
 
-                    <a class="dropdown-item" href="updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
-
                 </div>
             </li>
 
@@ -68,6 +66,10 @@
                 <a class="nav-link" href="searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotion</a>
             </li>
 
+
+            <li class="nav-item">
+                <a class="nav-link" href="addItemtoPromotionForm.php"><i class="fas fa-search"></i> Add an Item to a Promotion</a>
+            </li>
 
         </ul>
     </div>
