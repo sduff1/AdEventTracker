@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 
 
     //Get the elements from AdEvent_eventCode column from adevent table, that matches the number provided by the user in the Event Code field of addAdEvent.php
-    $check = mysqli_query($conn, "SELECT * from adevent WHERE event_code='$AdEvent_eventCode'");
+    $check = mysqli_query($conn, "SELECT * from ad_event WHERE event_code='$AdEvent_eventCode'");
 
     //Checks how many rows are in $check
     $checkRows = mysqli_num_rows($check);
@@ -49,10 +49,10 @@ if (isset($_POST['submit'])) {
         echo '<script>alert("Could not add Event! Event is already in system.")</script>';
     } else {
         //If there is no row, then it will process the query
-        $query = "INSERT INTO adevent(event_code, name, start_date, end_date, description, type) VALUES('$AdEvent_eventCode', '$AdEvent_name','$AdEvent_startDate','$AdEvent_endDate', '$AdEvent_description','$AdEvent_type')";
+        $query = "INSERT INTO ad_event(event_code, name, start_date, end_date, description, type) VALUES('$AdEvent_eventCode', '$AdEvent_name','$AdEvent_startDate','$AdEvent_endDate', '$AdEvent_description','$AdEvent_type')";
         echo '<script>alert("Ad Event has been added!")</script>';
         if (!mysqli_query($conn, $query)) {
-            echo "Error: '.mysqli_error($conn)";
+            echo "Error: '.mysqli_error($query)";
         }
     }
 

@@ -42,7 +42,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="addAdEventForm.php"><i class="fas fa-file-invoice-dollar"></i> Add Ad Event</a>
-                    <a class="dropdown-item" href="Update AdEvent/updateAdForm.php"><i class="fas fa-sync"></i> Update Ad Event</a>
+                    <a class="dropdown-item" href="updateAdEventForm.php"><i class="fas fa-sync"></i> Update Ad Event</a>
                 </div>
             </li>
 
@@ -52,9 +52,11 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="addPromotionForm.php"><i class="fas fa-cart-plus"></i> Add Promotion</a>
-
+<<<<<<< HEAD
                     <a class="dropdown-item" href="update Promotion/updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
-
+=======
+                    <a class="dropdown-item" href="updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
+>>>>>>> 6cf19c754c911f62eb3bf5605c2ddc164a51b326
                 </div>
             </li>
 
