@@ -1,10 +1,10 @@
 <?php
 
 //Need the connection to the server and database which is why it requires database.php
-require('configuration/database.php');
+require('../configuration/database.php');
 
 //Needs the AdEvent.php to create AdEvent object
-require('AdEvent.php');
+require('../AdEvent.php');
 
 //if submit has been clicked
 if (isset($_POST['submit'])) {
@@ -27,15 +27,18 @@ if (isset($_POST['submit'])) {
     $AdEvent_description = $AdEvent->getDescription();
     $AdEvent_type = $AdEvent->getType();
 
+
     //Updates row in the adevent table where the event_code in table matches the Event Code provided by the user
-    $query = "UPDATE adevent SET name ='$AdEvent_name',start_date = '$AdEvent_startDate', end_date = '$AdEvent_endDate', description = '$AdEvent_description', type='$AdEvent_type' WHERE event_code = {$AdEvent_eventCode}";
+    $query = "UPDATE ad_event SET name ='$AdEvent_name',start_date = '$AdEvent_startDate', end_date = '$AdEvent_endDate', description = '$AdEvent_description', type='$AdEvent_type' WHERE event_code = '{$AdEvent_eventCode}'";
 
     //Alerts user that the Event has been updated
     echo '<script>alert("Ad Event has been updated")</script>';
 
     if (!mysqli_query($conn, $query)) {
-        echo "Error: '.mysqli_error($conn)";
+        echo "Error: '.mysqli_error($query)";
     }
+
+    require ('updateAdForm.php');
 
 }
 

@@ -19,7 +19,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0a0b0d">
-    <a class="navbar-brand" href="index.php">Ad Event Tracker</a>
+    <a class="navbar-brand" href="../index.php">Ad Event Tracker</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,8 +31,8 @@
                     Item
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="addItemForm.php"><i class="far fa-plus-square"></i> Add Item</a>
-                    <a class="dropdown-item" href="Update Item/updateItemForm.php"><i class="fas fa-sync"></i> Update Item</a>
+                    <a class="dropdown-item" href="../addItemForm.php"><i class="far fa-plus-square"></i> Add Item</a>
+                    <a class="dropdown-item" href="../Update%20Item/updateItemForm.php"><i class="fas fa-sync"></i> Update Item</a>
                 </div>
             </li>
 
@@ -41,8 +41,8 @@
                     Ad Event
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="addAdEventForm.php"><i class="fas fa-file-invoice-dollar"></i> Add Ad Event</a>
-                    <a class="dropdown-item" href="Update AdEvent/updateAdForm.php"><i class="fas fa-sync"></i> Update Ad Event</a>
+                    <a class="dropdown-item" href="../addAdEventForm.php"><i class="fas fa-file-invoice-dollar"></i> Add Ad Event</a>
+                    <a class="dropdown-item" href="updateAdEventForm.php"><i class="fas fa-sync"></i> Update Ad Event</a>
                 </div>
             </li>
 
@@ -51,31 +51,28 @@
                     Promotion
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="addPromotionForm.php"><i class="fas fa-cart-plus"></i> Add Promotion</a>
-
-                    <a class="dropdown-item" href="update Promotion/updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
-
+                    <a class="dropdown-item" href="../addPromotionForm.php"><i class="fas fa-cart-plus"></i> Add Promotion</a>
+                    <a class="dropdown-item" href="updatePromotionForm.php"><i class="fas fa-sync"></i> Update Promotion</a>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="searchItemForm.php"><i class="fas fa-search"></i> Search Item</a>
+                <a class="nav-link" href="../searchItemForm.php"><i class="fas fa-search"></i> Search Item</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotion</a>
+                <a class="nav-link" href="../searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotion</a>
             </li>
 
-
             <li class="nav-item">
-                <a class="nav-link" href="addItemtoPromotionForm.php"><i class="fas fa-search"></i> Add an Item to a Promotion</a>
+                <a class="nav-link" href="../Update Promotion/updateItemForm.php"><i class="fas fa-search"></i> Update Item Form Test</a>
             </li>
 
         </ul>
     </div>
 </nav>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
