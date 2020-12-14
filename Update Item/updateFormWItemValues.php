@@ -23,34 +23,44 @@
 
 </head>
 <div>
-    <div class="container"
-        <div class = "form-group">
-            <h1>Update an Item </h1>
-            <form method="POST" action="updateItem.php" name ="myForm">
+    <div class= "container">
+<!--         <div class = "row justify-content-start">-->
+<!--             <div class = "col-sm">-->
+                <div class = "form-group">
+                    <h1>Item Details </h1>
+                    <form method="POST" action="updateItem.php" name ="myForm">
 
-            <label>Item Number</label>
-            <input value ="<?php echo $num?>" name="number" class="form-control">
+                    <label>Item Number</label>
+                    <input class ="form-control form-control-sm col-md-4" value ="<?php echo $num?>" name="number" class="form-control">
+                    <p></p>
 
-            <label>Item Description</label>
-            <input type = "text" value = "<?php  echo ($desc)?>" name="description" class="form-control">
+                    <label>Item Description</label>
+                    <input class ="form-control form-control-sm col-md-4" type = "text" value = "<?php  echo ($desc)?>" name="description" class="form-control">
+                    <p></p>
 
-            <label>Item Category</label>
-            <input value ="<?php echo $cat?>" name="category" class="form-control">
+                    <label>Item Category</label>
+                    <input class ="form-control form-control-sm col-md-4" value ="<?php echo $cat?>" name="category" class="form-control">
+                    <p></p>
 
-            <label>Item Department Name</label>
-            <input value = "<?php echo $dept?>" name="department" class="form-control">
+                    <label>Item Department Name</label>
+                    <input class ="form-control form-control-sm col-md-4" value = "<?php echo $dept?>" name="department" class="form-control">
+                    <p></p>
 
-            <label>Item Purchase Cost</label>
-            <input value = "<?php echo $cost?>" name="cost" class="form-control">
+                    <label>Item Purchase Cost</label>
+                    <input class ="form-control form-control-sm col-md-4" value = "<?php echo $cost?>" name="cost" class="form-control">
+                    <p></p>
 
-            <label>Item Full Retail Cost</label>
-            <input value = "<?php echo $retailCost?>" name="retail_cost" class="form-control">
+                    <label>Item Full Retail Cost</label>
+                    <input class ="form-control form-control-sm col-md-4" value = "<?php echo $retailCost?>" name="retail_cost" class="form-control">
+                    <p></p>
 
-            <p></p>
+                    <p></p>
 
-            <input type="submit" name="submit" value="Submit" class="btn btn-danger">
-            </form>
-        </div>
+                    <input type="submit" name="submit" value="Submit" class="btn btn-danger">
+                    </form>
+                </div>
+<!--             </div>-->
+         </div>
     </div>
 </body>
 </html>

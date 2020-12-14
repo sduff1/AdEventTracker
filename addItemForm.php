@@ -18,7 +18,7 @@ require('addItem.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add an Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/backdrop.css">
     <script type = "text/javascript">
         // Form validation for the following fields will come below ex. number,description etc.
         function tvalidate() {
@@ -71,27 +71,32 @@ require('addItem.php');
 
         <form method="POST" action="addItemForm.php" name ="myForm" onsubmit = "return(tvalidate());">
 
-            <label>Item Number</label>
-            <input type = "text" name="number" class="form-control">
+            <label>Item Number:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="number" class="form-control">
+            <p></p>
 
-            <label>Item Description</label>
-            <input type = "text" name="description" class="form-control">
+            <label>Item Description:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="description" class="form-control">
+            <p></p>
 
-            <label>Item Category</label>
-            <input type = "text" name="category" class="form-control">
+            <label>Item Category:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="category" class="form-control">
+            <p></p>
 
-            <label>Item Department Name</label>
-            <input type = "text" name="department" class="form-control">
+            <label>Item Department Name:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="department" class="form-control">
+            <p></p>
 
-            <label>Item Purchase Cost</label>
-            <input type = "text" name="cost" class="form-control">
+            <label>Item Purchase Cost:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="cost" class="form-control">
+            <p></p>
 
-            <label>Item Full Retail Cost</label>
-            <input type = "text" name="retail_cost" class="form-control">
+            <label>Item Full Retail Cost:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="retail_cost" class="form-control">
 
             <p></p>
 
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+            <input type="submit" name="submit" value="Submit" class="btn btn-outline-light">
 
         </form>
     </div>

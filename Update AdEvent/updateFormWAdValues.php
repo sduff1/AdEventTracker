@@ -7,7 +7,7 @@
         $description = $_SESSION['description'];
         $type = $_SESSION['type'];
 
-        
+
 ?>
 
 
@@ -30,22 +30,27 @@
         <form method="POST" action="updateAdEvent.php" name ="myForm">
 
             <label>Event Code</label>
-            <input value ="<?php echo $num?>" name="event_code" class="form-control">
+            <input  class ="form-control form-control-sm col-md-4" value ="<?php echo $num?>" name="event_code">
+            <p></p>
 
             <label>Event Name</label>
-            <input type = "text" value = "<?php  echo ($name)?>" name="name" class="form-control">
+            <input  class ="form-control form-control-sm col-md-4" type = "text" value = "<?php  echo ($name)?>" name="name">
+            <p></p>
 
             <label>Start Date</label>
-            <input value ="<?php echo $startDate?>" name="start_date" class="form-control">
+            <input  class ="form-control form-control-sm col-md-4" value ="<?php echo $startDate?>" name="start_date">
+            <p></p>
 
             <label>End Date</label>
-            <input value = "<?php echo $endDate?>" name="end_date" class="form-control">
+            <input  class ="form-control form-control-sm col-md-4" value = "<?php echo $endDate?>" name="end_date">
+            <p></p>
 
             <label>Description</label>
-            <input value = "<?php echo $description?>" name="description" class="form-control">
+            <input  class ="form-control form-control-sm col-md-4" value = "<?php echo $description?>" name="description">
+            <p></p>
 
             <label>Type</label>
-            <input value = "<?php echo $type?>" name="type" class="form-control">
+            <input  class ="form-control form-control-sm col-md-4" value = "<?php echo $type?>" name="type">
 
             <p></p>
 

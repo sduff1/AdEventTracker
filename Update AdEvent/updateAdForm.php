@@ -19,7 +19,8 @@ require('updateGetAdValues.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script type = "text/javascript">
+    <link rel="stylesheet" href="../css/backdrop.css">
+    <script type = "text/javascript"><link rel="stylesheet" href="css/backdrop.css">
         // Form validation for the following fields will come below ex. number,description etc.
         function validate() {
 //Only including validation for an empty item number because it is the only necessary one to start with..
@@ -47,10 +48,10 @@ require('updateGetAdValues.php');
         <form method="POST" action="updateAdForm.php" name ="myForm" onsubmit = "return(validate());">
 
             <label>Enter Event Code of the Event You Wish To Update</label>
-            <input type = "text" name="event_code" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="event_code" class="form-control">
 
             <p></p>
-            <input type = "submit" name = "submit" value ="Submit" class="btn btn-primary">
+            <input type = "submit" name = "submit" value ="Submit" class="btn btn-outline-light">
 
             <!--            <input type="submit" name="submit" value="Submit" class="btn btn-danger">-->
 

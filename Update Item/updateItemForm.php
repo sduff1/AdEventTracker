@@ -19,6 +19,7 @@ require('updateGetItemValues.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/backdrop.css">
     <script type = "text/javascript">
         // Form validation for the following fields will come below ex. number,description etc.
         function validate() {
@@ -37,26 +38,19 @@ require('updateGetItemValues.php');
     </script>
 
 </head>
-<body>
-<div class ="container">
+    <body>
+        <div class ="container">
+            <div class="form-group-row">
+                            <h1>Update an Item</h1>
+                                        <form method="POST" action="updateItemForm.php" name ="myForm" onsubmit = "return(validate());">
 
-    <div class="form-group">
+                                            <label>Enter Item Number of Item You Wish To Update</label>
+                                            <input class ="form-control form-control-sm col-md-4" type = "text" name="number" class="col-md-3">
 
-        <h1>Update an Item</h1>
-
-        <form method="POST" action="updateItemForm.php" name ="myForm" onsubmit = "return(validate());">
-
-            <label>Enter Item Number of Item You Wish To Update</label>
-            <input type = "text" name="number" class="form-control">
-
-            <p></p>
-            <input type = "submit" name = "submit" value ="Submit" class="btn btn-primary">
-
-<!--            <input type="submit" name="submit" value="Submit" class="btn btn-danger">-->
-
-        </form>
-    </div>
-</div>
-
-</body>
+                                            <p></p>
+                                            <input type = "submit" name = "submit" value ="Submit" class="btn btn-outline-light">
+                                        </form>
+            </div>
+        </div>
+    </body>
 </html>

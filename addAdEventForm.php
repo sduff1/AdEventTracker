@@ -19,7 +19,7 @@ require('addAdEvent.php');
     <title>Add Ad Event </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/backdrop.css">
     <script type = "text/javascript">
         // Form validation for the following fields will come below ex. number,description etc.
         function tvalidate() {
@@ -72,26 +72,31 @@ require('addAdEvent.php');
         <form method="POST" action="addAdEventForm.php"  name ="myForm" onsubmit = "return(tvalidate());">
 
             <label>Event Code:</label>
-            <input type="text" name="event_code" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="event_code" class="form-control">
+            <p></p>
 
             <label>Name:</label>
-            <input type="text" name="name" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="name" class="form-control">
+            <p></p>
 
             <label>Start Date:</label>
-            <input type="text" name="start_date" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="start_date" class="form-control">
+            <p></p>
 
             <label>End Date:</label>
-            <input type="text" name="end_date" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="end_date" class="form-control">
+            <p></p>
 
             <label>Description:</label>
-            <input type="text" name="description" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="description" class="form-control">
+            <p></p>
 
             <label>Type:</label>
-            <input type="text" name="type" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="type" class="form-control">
 
             <p></p>
 
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+            <input type="submit" name="submit" value="Submit" class="btn btn-outline-light">
 
         </form>
     </div>
