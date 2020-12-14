@@ -21,6 +21,7 @@ require('includes/header.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search for a Promotion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/backdrop.css">
 </head>
 <body>
 <div class ="container">
@@ -32,7 +33,7 @@ require('includes/header.php');
         <form method="POST" action="searchPromotionForm.php">
 
             <label>Enter the name of the Promotion you wish to search</label>
-            <input type = "text" name="name" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="name">
 
 
             <p></p>

@@ -27,20 +27,24 @@ $promoCode =  $_SESSION['PromoCode'];
         <h1>Update a Promotion </h1>
         <form method="POST" action="UpdatePromotion.php" name ="myForm">
 
-            <label>Promo Code</label>
-            <input value ="<?php echo $promoCode?>" name="promoCode" class="form-control">
+            <label>Promo Code:</label>
+            <input class ="form-control form-control-sm col-md-4" value ="<?php echo $promoCode?>" name="promoCode">
+            <p></p>
 
-            <label>Name</label>
-            <input type = "text" value = "<?php  echo ($name)?>" name="name" class="form-control">
+            <label>Name:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" value = "<?php  echo ($name)?>" name="name">
+            <p></p>
 
-            <label>Description</label>
-            <input value ="<?php echo $desc?>" name="description" class="form-control">
+            <label>Description:</label>
+            <input class ="form-control form-control-sm col-md-4"value ="<?php echo $desc?>" name="description">
+            <p></p>
 
-            <label>Amount Off</label>
-            <input value = "<?php echo $amountOff?>" name="amountOff" class="form-control">
+            <label>Amount Off:</label>
+            <input class ="form-control form-control-sm col-md-4" value = "<?php echo $amountOff?>" name="amountOff">
+            <p></p>
 
-            <label>Promotion Type(Must be Percent or Dollar)</label>
-            <input value = "<?php echo $promoType?>" name="promoType" class="form-control">
+            <label>Promotion Type(Must be Percent or Dollar):</label>
+            <input class ="form-control form-control-sm col-md-4" value = "<?php echo $promoType?>" name="promoType">
 
 
             <p></p>

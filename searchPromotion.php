@@ -21,14 +21,14 @@ if(isset($_POST['submit'])) {
         $name = $post['Name'];
         $desc = $post['Description'];
         $aOff = $post['AmountOff'];
-        $type = $post['Type'];
-        $code = $post['Code'];
+        $type = $post['PromoType'];
+        $code = $post['PromoCode'];
 
         $_SESSION['Name'] = $name;
         $_SESSION['Description'] = $desc;
         $_SESSION['AmountOff'] = $aOff;
-        $_SESSION['Type'] = $type;
-        $_SESSION['Code'] = $code;
+        $_SESSION['PromoType'] = $type;
+        $_SESSION['PromoCode'] = $code;
     }
     else{
         echo "that Promotion does not exist";

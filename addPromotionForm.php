@@ -67,14 +67,17 @@ require('addPromotion.php');
 
         <form method="POST" action="addPromotionForm.php"  name ="myForm" onsubmit = "return(tvalidate());">
 
-            <label>Promotion Name</label>
+            <label>Promotion Name:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="name" class="form-control">
+            <p></p>
 
-            <label>Description</label>
+            <label>Description:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="description" class="form-control">
+            <p></p>
 
-            <label>Amount Off</label>
+            <label>Amount Off:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="amountOff" class="form-control">
+            <p></p>
 
             <br>
 
@@ -86,13 +89,13 @@ require('addPromotion.php');
 
             <br>
 
-            <label>Promo Code</label>
+            <label>Promo Code:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="code" class="form-control">
 
 
             <p></p>
 
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+            <input type="submit" name="submit" value="Submit" class="btn btn-outline-light">
 
         </form>
     </div>

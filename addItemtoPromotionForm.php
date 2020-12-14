@@ -20,6 +20,7 @@ require('addItemtoPromotion.php');
     <title>Add an Item to a Promotion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/backdrop.css">
 </head>
 <body>
 <div class="container">
@@ -31,13 +32,15 @@ require('addItemtoPromotion.php');
         <form method="POST" action="addItemtoPromotionForm.php">
 
             <label>ID:</label>
-            <input type="text" name="ID" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="ID">
+            <p></p>
 
             <label>Promo Code:</label>
-            <input type="text" name="promoCode" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="promoCode">
+            <p></p>
 
             <label>Item Number:</label>
-            <input type="text" name="itemNumber" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="text" name="itemNumber">
 
             <p></p>
 
