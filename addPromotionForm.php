@@ -24,13 +24,13 @@ require('addPromotion.php');
         function tvalidate() {
 
             if (document.myForm.name.value == "") {
-                alert("Please provide the item name!");
-                document.myForm.Name.focus();
+                alert("Please provide the promotion name!");
+                document.myForm.name.focus();
                 return false;
             }
 
             if (document.myForm.description.value == "") {
-                alert("Please provide the item description!");
+                alert("Please provide the promotion description!");
                 document.myForm.description.focus();
                 return false;
             }
@@ -40,14 +40,10 @@ require('addPromotion.php');
                 document.myForm.amountOff.focus();
                 return false;
             }
-            if (document.myForm.type.value == "") {
-                alert("Please provide the type!");
-                document.myForm.type.focus();
-                return false;
-            }
-            if (document.myForm.cost.code == "") {
-                alert("Please provide the items' promo code!");
-                document.myForm.cost.focus();
+
+            if (document.myForm.code.code == "") {
+                alert("Please provide the promo code!");
+                document.myForm.code.focus();
                 return false;
             }
 
