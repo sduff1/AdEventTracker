@@ -4,6 +4,8 @@ require('../configuration/database.php');
 
 //Needs the Promotion.php to create Promotion object
 require('../Promotion.php');
+require('../item.php');
+require('../ItemtoPromotion.php');
 
 //if submit has been clicked
 if (isset($_POST['submit'])) {
@@ -13,7 +15,6 @@ if (isset($_POST['submit'])) {
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $amountOff = mysqli_real_escape_string($conn, $_POST['amountOff']);
     $promoType = mysqli_real_escape_string($conn, $_POST['promoType']);
-
 
     //Create Promotion object from data collected
     $product = new Promotion("$name", "$description", "$amountOff", "$promoType", "$promoCode");
@@ -25,13 +26,62 @@ if (isset($_POST['submit'])) {
     $ptype= $product->getType();
     $pcode = $product->getCode();
 
-
     //Updates row in the Promotion table where the code in table matches the promo code provided by the user
-      $query = "UPDATE promotion SET Name='$pname',Description = '$pdesc', AmountOff = '$paOff', PromoType = '$ptype'  WHERE PromoCode = {$pcode}";
+    $query = "UPDATE promotion SET Name = '$pname',Description = '$pdesc', AmountOff = '$paOff', PromoType = '$ptype'  WHERE PromoCode = {$pcode}";
 
+    echo '<script>alert("Promotion has been updated")</script>';
+
+    if (!mysqli_query($conn, $query)) {
+        echo "Error: '.mysqli_error($conn)";
+    }
+
+
+    $query = "SELECT * FROM promotionitem WHERE PromoCode = {$pcode}";
+    $result = mysqli_query($conn,$query);
+    $post = mysqli_fetch_assoc($result);
+
+    $itp_ID = $post['ID'];
+    $itp_PromoCode = $post['PromoCode'];
+    $itp_ItemNumber = $post['ItemNumber'];
+
+    $ItemtoPromotion = new ItemtoPromotion("$itp_ID", "$itp_PromoCode", "$itp_ItemNumber");
+
+    $itempromotion_id = $ItemtoPromotion->getID();
+    $itempromotion_promoCode = $ItemtoPromotion->getPromoCode();
+    $itempromotion_itemNumber = $ItemtoPromotion->getItemNumber();
+
+    //Item Variables
+    $query = "SELECT * FROM item WHERE item_number = {$itempromotion_itemNumber}";
+    $result = mysqli_query($conn,$query);
+    $post = mysqli_fetch_assoc($result);
+
+    $item_number = $post['item_number'];
+    $item_description = $post['item_description'];
+    $item_category = $post['category'];
+    $item_department = $post['department_name'];
+    $item_purchase = $post['purchase_cost'];
+    $item_full = $post['full_retail_price'];
+
+    $item = new Item("$item_number", "$item_description", "$item_category", "$item_department", "$item_purchase", "$item_full");
+
+    //Getter methods to retrieve properties of the Object created
+    $item_num = $item->getItemNumber();
+    $item_desc= $item->getDescription();
+    $item_cat = $item->getCategory();
+    $item_dept= $item->getDepartment();
+    $item_cost = $item->getCost();
+    $item_rtl_cost= $item->getRetailCost();
+
+    if($ptype == "Percent"){
+        $item_cost = $item_rtl_cost - ($item_rtl_cost * ($paOff/100));
+    }else{
+        $item_cost = $item_rtl_cost - $paOff;
+    }
+
+    $query = "UPDATE item SET item_description='$item_desc',category = '$item_cat', department_name = '$item_dept', purchase_cost = '$item_cost', full_retail_price='$item_rtl_cost' WHERE item_number = {$item_num}";
 
     //Alerts user that the Promotion has been updated
-    echo '<script>alert("Promotion has been updated")</script>';
+    echo '<script>alert("Item associated has been updated.")</script>';
 
     if (!mysqli_query($conn, $query)) {
         echo "Error: '.mysqli_error($conn)";

@@ -73,9 +73,9 @@ if(isset($_POST['submit'])) {
 
     //Calculate New Purchase Cost
     if($promo_promoType == "Percent"){
-        $item_cost = $item_cost - ($item_cost * ($promo_amountOff/100));
+        $item_cost = $item_rtl_cost - ($item_rtl_cost * ($promo_amountOff/100));
     }else{
-        $item_cost = $item_cost - $promo_amountOff;
+        $item_cost = $item_rtl_cost - $promo_amountOff;
     }
 
     //Updates row in the item table where the item_number in table matches the Item Number provided by the user
