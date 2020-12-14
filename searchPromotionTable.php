@@ -6,8 +6,8 @@
 $name = $_SESSION['Name'];
 $desc = $_SESSION['Description'];
 $aOff =  $_SESSION['AmountOff'];
-$type = $_SESSION['Type'];
-$code =  $_SESSION['Code'];
+$type = $_SESSION['PromoType'];
+$code =  $_SESSION['PromoCode'];
 
 
 //HTML file creates a table
@@ -23,9 +23,10 @@ $code =  $_SESSION['Code'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/backdrop.css">
 </head>
 <body>
-<table class="table">
+<table class="table table-dark">
     <thead>
     <tr>
         <th scope="col">Promotion Name</th>
