@@ -59,16 +59,16 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="searchItemForm.php"><i class="fas fa-search"></i> Search Item</a>
+                <a class="nav-link" href="searchItemForm.php"><i class="fas fa-search"></i> Search Items and add it to Promotions</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotion</a>
+                <a class="nav-link" href="searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotions and add it to Ad Events</a>
             </li>
 
 
             <li class="nav-item">
-                <a class="nav-link" href="addItemtoPromotionForm.php"><i class="fas fa-search"></i> Add an Item to a Promotion</a>
+                <a class="nav-link" href="addItemtoPromotionForm.php"><i class="far fa-plus-square"></i> Add an Item to a Promotion</a>
             </li>
 
         </ul>
