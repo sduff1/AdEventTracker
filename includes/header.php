@@ -70,6 +70,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="addItemtoPromotionForm.php"><i class="far fa-plus-square"></i> Add an Item to a Promotion</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="adEventViewerForm.php"><i class="fas fa-search"></i> Ad Event Viewer</a>
+            </li>
 
         </ul>
     </div>
