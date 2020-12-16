@@ -27,7 +27,7 @@ require('includes/header.php');
 
         <form method="POST" action="searchPromotionForm.php">
 
-            <h5>Enter the Promotion Code, Name, and/or Description of the Promotion.</h5>
+            <h5>Enter the Promotion Code, Name, and/or Description of the Promotion you want to search for.</h5>
             <label>Promotion Code:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="code">
             <p></p>
@@ -43,6 +43,7 @@ require('includes/header.php');
             <input type="submit" name="submit" value="Submit" class="btn btn-primary">
             <p></p>
 
+            <h1>Search for an Ad Event</h1>
             <h5>Enter the Event Code, Date Range, Name and/or Description of the Ad Event.</h5>
             <label>Event Code:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="event_code">
@@ -63,7 +64,7 @@ require('includes/header.php');
             <input type="submit" name="submit2" value="Submit" class="btn btn-primary">
             <p></p>
 
-            <h5>Enter the Promotion Code and Event Code above,Notes below if wanted, and then click this button to add the Promotion to the Ad Event.</h5>
+            <h5>Enter the Promotion Code and Event Code above,Notes below if wanted, and then click the button below to add the Promotion to the Ad Event.</h5>
             <label>Notes:</label>
             <input class ="form-control form-control-sm col-md-4" type = "text" name="notes">
             <p></p>
