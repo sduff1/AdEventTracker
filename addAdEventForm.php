@@ -80,11 +80,11 @@ require('addAdEvent.php');
             <p></p>
 
             <label>Start Date:</label>
-            <input class ="form-control form-control-sm col-md-4" type="text" name="start_date" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="date" name="start_date" class="form-control">
             <p></p>
 
             <label>End Date:</label>
-            <input class ="form-control form-control-sm col-md-4" type="text" name="end_date" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type="date" name="end_date" class="form-control">
             <p></p>
 
             <label>Description:</label>
@@ -92,10 +92,23 @@ require('addAdEvent.php');
             <p></p>
 
             <label>Type:</label>
-            <input class ="form-control form-control-sm col-md-4" type="text" name="type" class="form-control">
 
+            <div class="form-check form-check-inline">
+
+                <input class="form-check-input" type="radio" value="Percentage" name ="type">
+                <label class="form-check-label">Percent</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="Dollar" name= "type_D">
+                <label class="form-check-label">Dollar</label>
+            </div>
+
+
+<!--            <label>Type:</label>-->
+<!--            <input class ="form-control form-control-sm col-md-4" type="text" name="type" class="form-control">-->
+<!---->
             <p></p>
-
+<!---->
             <input type="submit" name="submit" value="Submit" class="btn btn-outline-light">
 
         </form>

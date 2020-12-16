@@ -16,13 +16,20 @@ require('AdEvent.php');
 //if submit has been clicked
 if (isset($_POST['submit'])) {
 
+    if(isset($_POST['type_D'])){
+        $type = mysqli_real_escape_string($conn, $_POST['type_D']);
+    }else{
+        $type = mysqli_real_escape_string($conn, $_POST['type']);
+    }
+
+
     //Get form data using $_POST
     $eventCode = mysqli_real_escape_string($conn, $_POST['event_code']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $startDate = mysqli_real_escape_string($conn, $_POST['start_date']);
     $endDate = mysqli_real_escape_string($conn, $_POST['end_date']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
-    $type = mysqli_real_escape_string($conn, $_POST['type']);
+
 
     //Create Ad Event object from data collected
     $AdEvent = new AdEvent("$eventCode", "$name", "$startDate", "$endDate", "$description", "$type");
