@@ -50,13 +50,20 @@ if(isset($_POST['submit'])){
     {
         $promocode = $pcode;
         require('configuration/database.php');
-        $query2 = "SELECT ItemNumber FROM promotionitem WHERE PromoCode = '$promocode'";
-        return mysqli_fetch_assoc(mysqli_query($conn, $query2));
+        $query2 = mysqli_query($conn, "SELECT ItemNumber FROM promotionitem WHERE PromoCode = '$promocode'");
+        $i=0;
+        $result[] = array();
+        while($row = mysqli_fetch_assoc($query2))
+        {
+            $result[$i]=$row['ItemNumber'];
+            $i++;
+        }
+        return $result;
     }
     function getItem($inum)
     {
         require('configuration/database.php');
-        $num = $inum['ItemNumber'];
+        $num = $inum;
         $query3 = "SELECT * FROM item WHERE item_number = '$num'";
         $result3 = mysqli_query($conn,$query3);
         $post3 = mysqli_fetch_assoc($result3);

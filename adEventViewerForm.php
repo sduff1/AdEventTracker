@@ -68,7 +68,7 @@ require('includes/header.php');
             ?>
 
             <p></p>
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+            <input type="submit" name="submit" value="submit" class="btn btn-primary">
 
         </form>
     </div>

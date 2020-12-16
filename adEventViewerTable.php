@@ -46,10 +46,19 @@ $promos = $_SESSION['promos'];
         <td><?php echo $desc?></td>
     </tbody>
 </table>
-</br>
+<br>
+<h2>Promotions</h2><form method="POST" action="addPromotionToAdEventForm.php">
+    <input type="hidden" id="code" name="code" value="<?php echo $code?>" />
+    <input type="submit" value="add a new Promotion" />
+</form>
+<div>
+
 <?php
 
  for ($i = 0; $i < count($promos); $i++){
+     echo '<form method ="POST" action="addPromotionToAdEvent.php">';
+     echo '<input type="hidden" id="code" name="code" value="'.getPromotion($promos[$i])->getCode().'" />';
+     echo '<input type="hidden" id="event" name="event" value="'.$code.'" />';
       echo '<table class="table">';
     echo '<thead>';
     echo '<tr>';
@@ -58,6 +67,7 @@ $promos = $_SESSION['promos'];
     echo    '<th scope="col">Amount Off</th>';
     echo    '<th scope="col">Type</th>';
     echo    '<th scope="col">Promotion Code</th>';
+     echo    '<th scope="col"><input type="submit" name="Remove" value="Remove"/></th>';
 
     echo '</tr>';
     echo '</thead>';
@@ -70,8 +80,9 @@ $promos = $_SESSION['promos'];
     echo    '<td>'.getPromotion($promos[$i])->getCode().'</td>';
     echo '</tbody>';
     echo '</table>';
-       $promoitem[] = promoitems($promos[$i]['PromoCode']);
-     for ($a = $i; $a < count($promoitem); $a++){
+    echo '</form>';
+       $promoitem = promoitems($promos[$i]['PromoCode']);
+     for ($a = 0; $a < count($promoitem); $a++){
          echo '<table class="table">';
          echo '<thead>';
          echo '<tr>';
@@ -101,11 +112,17 @@ $promos = $_SESSION['promos'];
 
 
      }
+     $promocode=getPromotion($promos[$i])->getCode();
+     echo '<form method="POST" action="addPromotionItemsForm.php">';
+    echo '<input type="hidden" id="promo" name="promo" value="'.$promocode.'" />';
+    echo '<input type="submit" name="submit" value="add a new Item" />';
+    echo '</form>';
      echo '</br></br>';
 
 
 }
 
 ?>
+</div>
 </body>
 </html>
