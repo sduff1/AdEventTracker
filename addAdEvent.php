@@ -16,9 +16,16 @@ require('AdEvent.php');
 //if submit has been clicked
 if (isset($_POST['submit'])) {
 
-    if(isset($_POST['type_D'])){
-        $type = mysqli_real_escape_string($conn, $_POST['type_D']);
-    }else{
+//    if(isset($_POST['type_D'])){
+//        $type = mysqli_real_escape_string($conn, $_POST['type_D']);
+//    }else{
+//        $type = mysqli_real_escape_string($conn, $_POST['type']);
+//    }
+
+    $radioVal = $_POST['type'];
+    if($radioVal == "Percentage"){
+        $type = mysqli_real_escape_string($conn, $_POST['type']);
+    }else if ($radioVal == "Dollar"){
         $type = mysqli_real_escape_string($conn, $_POST['type']);
     }
 
