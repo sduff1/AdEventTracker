@@ -54,10 +54,6 @@ if(isset($_POST['submit2'])) {
     $aedate_range = mysqli_real_escape_string($conn, $_POST['date_range']);
     $aedescription = mysqli_real_escape_string($conn, $_POST['event_description']);
 
-    $code = mysqli_real_escape_string($conn, $_POST['code']);
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $description = mysqli_real_escape_string($conn, $_POST['description']);
-
     $query = "SELECT * FROM adevent WHERE event_code = '$aecode'";
 
     if($aecode == null) {
