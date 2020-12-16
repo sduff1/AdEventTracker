@@ -93,20 +93,23 @@ require('addAdEvent.php');
 
             <label>Type:</label>
 
-            <div class="form-check form-check-inline">
 
-                <input class="form-check-input" type="radio" value="Percentage" name ="type">
-                <label class="form-check-label">Percent</label>
+
+            <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="type" value="Percentage" checked>
+                <label class="form-check-label" >
+                    Percent
+                </label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="Dollar" name= "type_D">
-                <label class="form-check-label">Dollar</label>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="type"  value="Dollar">
+                <label class="form-check-label" >
+                    Dollar
+                </label>
             </div>
 
 
-<!--            <label>Type:</label>-->
-<!--            <input class ="form-control form-control-sm col-md-4" type="text" name="type" class="form-control">-->
-<!---->
+
             <p></p>
 <!---->
             <input type="submit" name="submit" value="Submit" class="btn btn-outline-light">

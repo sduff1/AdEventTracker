@@ -52,19 +52,22 @@ if(isset($_POST['submit2'])) {
     $aedate_range = mysqli_real_escape_string($conn, $_POST['date_range']);
     $aedescription = mysqli_real_escape_string($conn, $_POST['event_description']);
 
-    $query = "SELECT * FROM adevent WHERE event_code = '$aecode'";
+    echo($aename);
+
+    $query = "SELECT * FROM ad_event WHERE event_code = '$aecode'";
 
     if($aecode == null) {
-        $query = "SELECT * FROM adevent WHERE name = '$aename'";
+        $query = "SELECT * FROM ad_event WHERE name = '$aename'";
 
         if($aename == null){
-            $query = "SELECT * FROM adevent WHERE description = '$aedescription'";
+            $query = "SELECT * FROM ad_event WHERE description = '$aedescription'";
         }
     }
 
     $result = mysqli_query($conn,$query);
 
     $post = mysqli_fetch_assoc($result);
+
 
     if ($post > 0) {
         $event_code = $post['event_code'];
