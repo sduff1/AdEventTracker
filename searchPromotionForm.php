@@ -41,17 +41,7 @@ require('includes/header.php');
             <p></p>
 
             <input type="submit" name="submit" value="Submit" class="btn btn-primary">
-
-        </form>
-    </div>
-</div>
-<div class ="container">
-
-    <div class="form-group">
-
-        <h1>Search for an Ad Event</h1>
-
-        <form method="POST" action="searchPromotionForm.php">
+            <p></p>
 
             <h5>Enter the Event Code, Date Range, Name and/or Description of the Ad Event.</h5>
             <label>Event Code:</label>
@@ -71,10 +61,19 @@ require('includes/header.php');
             <p></p>
 
             <input type="submit" name="submit2" value="Submit" class="btn btn-primary">
+            <p></p>
+
+            <h5>Enter the Promotion Code and Event Code above,Notes below if wanted, and then click this button to add the Promotion to the Ad Event.</h5>
+            <label>Notes:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="notes">
+            <p></p>
+            <input type="submit" name="submit3" value="Submit" class="btn btn-danger">
 
         </form>
     </div>
 </div>
+
+
 <?php require('searchPromotion.php') ?>
 
 
