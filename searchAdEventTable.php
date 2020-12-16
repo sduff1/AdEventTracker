@@ -2,12 +2,13 @@
 //session_start();
 
 
-//Gets data from session created in searchItem.php
-$name = $_SESSION['Name'];
-$desc = $_SESSION['Description'];
-$aOff =  $_SESSION['AmountOff'];
-$type = $_SESSION['PromoType'];
-$code =  $_SESSION['PromoCode'];
+//Gets data from session created in searchPromotion.php
+$event_code = $_SESSION['event_code'];
+$event_name = $_SESSION['name'];
+$event_start =  $_SESSION['start_date'];
+$event_end = $_SESSION['end_date'];
+$event_description =  $_SESSION['description'];
+$event_type = $_SESSION['type'];
 
 
 //HTML file creates a table
@@ -29,21 +30,23 @@ $code =  $_SESSION['PromoCode'];
 <table class="table table-dark">
     <thead>
     <tr>
-        <th scope="col">Promotion Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Amount Off</th>
-        <th scope="col">Type</th>
-        <th scope="col">Code</th>
+        <th scope="col">Event Code:</th>
+        <th scope="col">Name:</th>
+        <th scope="col">Start Date:</th>
+        <th scope="col">End Date:</th>
+        <th scope="col">Description:</th>
+        <th scope="col">Type:</th>
 
     </tr>
     </thead>
     <tbody>
     <tr>
-        <th scope="row"><?php echo $name?></th>
-        <td><?php echo $desc?></td>
-        <td><?php echo $aOff?></td>
-        <td><?php echo $type?></td>
-        <td><?php echo $code?></td>
+        <th scope="row"><?php echo $event_code?></th>
+        <td><?php echo $event_name?></td>
+        <td><?php echo $event_start?></td>
+        <td><?php echo $event_end?></td>
+        <td><?php echo $event_description?></td>
+        <td><?php echo $event_type?></td>
     </tbody>
 </table>
 </body>

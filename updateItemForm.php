@@ -47,8 +47,6 @@ require('updateItem.php');
             <label>Item Full Retail Cost</label>
             <input type = "text" name="retail_cost" class="form-control">
 
-            <label>Promocode</label>
-            <input type = "text" name="promocode" class="form-control">
 
             <p></p>
 

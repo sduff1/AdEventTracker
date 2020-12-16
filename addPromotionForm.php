@@ -18,6 +18,41 @@ require('addPromotion.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add a Promotion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/backdrop.css">
+    <script type = "text/javascript">
+        // Form validation for the following fields will come below ex. number,description etc.
+        function tvalidate() {
+
+            if (document.myForm.name.value == "") {
+                alert("Please provide the promotion name!");
+                document.myForm.name.focus();
+                return false;
+            }
+
+            if (document.myForm.description.value == "") {
+                alert("Please provide the promotion description!");
+                document.myForm.description.focus();
+                return false;
+            }
+
+            if (document.myForm.amountOff.value == "") {
+                alert("Please provide the amount off!");
+                document.myForm.amountOff.focus();
+                return false;
+            }
+
+            if (document.myForm.code.code == "") {
+                alert("Please provide the promo code!");
+                document.myForm.code.focus();
+                return false;
+            }
+
+
+            return (true);
+        }
+
+
+    </script>
 </head>
 <body>
 <div class ="container">
@@ -26,30 +61,37 @@ require('addPromotion.php');
 
         <h1>Add a Promotion</h1>
 
-        <form method="POST" action="addPromotionForm.php">
+        <form method="POST" action="addPromotionForm.php"  name ="myForm" onsubmit = "return(tvalidate());">
 
-            <label>Promotion Name</label>
-            <input type = "text" name="name" class="form-control">
+            <label>Promotion Name:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="name" class="form-control">
+            <p></p>
 
-            <label>Description</label>
-            <input type = "text" name="description" class="form-control">
+            <label>Description:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="description" class="form-control">
+            <p></p>
 
-            <label>Amount Off</label>
-            <input type = "text" name="amountOff" class="form-control">
+            <label>Amount Off:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="amountOff" class="form-control">
+            <p></p>
+
+            <br>
 
             <label>Type</label>
-            <input type = "text" name="type" class="form-control">
+            <select name="type" id="type">
+                <option value="Dollar">Dollar</option>
+                <option value="Percent">Percent</option>
+            </select>
 
-            <label>Promo Code</label>
-            <input type = "text" name="code" class="form-control">
+            <br>
 
-            <label>Event Code</label>
-            <input type = "text" name="event" class="form-control">
+            <label>Promo Code:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="code" class="form-control">
 
 
             <p></p>
 
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+            <input type="submit" name="submit" value="Submit" class="btn btn-outline-light">
 
         </form>
     </div>

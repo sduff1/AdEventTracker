@@ -9,7 +9,6 @@ $cat =  $_SESSION['category'];
 $dept = $_SESSION['department_name'];
 $cost =  $_SESSION['purchase_cost'];
 $retailCost = $_SESSION['full_retail_cost'];
-$promocode = $_SESSION['promocode'];
 
 
 //HTML file creates a table
@@ -25,31 +24,31 @@ $promocode = $_SESSION['promocode'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/backdrop.css">
+
 </head>
 <body>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Item Number</th>
-        <th scope="col">Item Description</th>
-        <th scope="col">Category</th>
-        <th scope="col">Department Name</th>
-        <th scope="col">Purchase Cost</th>
-        <th scope="col">Full Retail Cost</th>
-        <th scope="col">Promotion</th>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Item Number</th>
+            <th scope="col">Item Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Purchase Cost</th>
+            <th scope="col">Full Retail Cost</th>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row"><?php echo $num?></th>
-        <td><?php echo $desc?></td>
-        <td><?php echo $cat?></td>
-        <td><?php echo $dept?></td>
-        <td><?php echo $cost?></td>
-        <td><?php echo $retailCost?></td>
-        <td><?php echo $promocode?></td>
-    </tbody>
-</table>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"><?php echo $num?></th>
+            <td><?php echo $desc?></td>
+            <td><?php echo $cat?></td>
+            <td><?php echo $dept?></td>
+            <td><?php echo $cost?></td>
+            <td><?php echo $retailCost?></td>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -14,7 +14,6 @@ if (isset($_POST['submit'])) {
     $aOff = mysqli_real_escape_string($conn, $_POST['amountOff']);
     $type = mysqli_real_escape_string($conn, $_POST['type']);
     $code = mysqli_real_escape_string($conn, $_POST['code']);
-    $event = mysqli_real_escape_string($conn, $_POST['event']);
 
     //Create Promotion object from data collected
     $product = new Promotion("$name", "$description", "$aOff", "$type", "$code");
@@ -25,10 +24,9 @@ if (isset($_POST['submit'])) {
     $paOff = $product->getAmountOff();
     $ptype= $product->getType();
     $pcode = $product->getCode();
-    $pevent= $product->getEvent();
 
     //Updates row in the Promotion table where the code in table matches the promo code provided by the user
-    $query = "UPDATE Promotion SET name ='$pname',description = '$pdesc', amountOff = '$paOff', type = '$ptype', event '$pevent' WHERE code = {$pcode}";
+    $query = "UPDATE Promotion SET Name ='$pname',Description = '$pdesc', AmountOff = '$paOff', PromoType = '$ptype' WHERE PromoCode = {$pcode}";
 
     //Alerts user that the Promotion has been updated
     echo '<script>alert("Promotion has been updated")</script>';

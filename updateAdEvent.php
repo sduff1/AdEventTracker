@@ -14,10 +14,10 @@ if (isset($_POST['submit'])) {
     $startDate = mysqli_real_escape_string($conn, $_POST['start_date']);
     $endDate = mysqli_real_escape_string($conn, $_POST['end_date']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
-    $type = mysqli_real_escape_string($conn, $_POST['type']);
+
 
     //Create Ad Event object from data collected
-    $AdEvent = new AdEvent("$eventCode", "$name", "$startDate", "$endDate", "$description", "$type");
+    $AdEvent = new AdEvent("$eventCode", "$name", "$startDate", "$endDate", "$description");
 
     //Getter methods to retrieve properties of the Object created
     $AdEvent_eventCode = $AdEvent->getEventCode();
@@ -25,10 +25,10 @@ if (isset($_POST['submit'])) {
     $AdEvent_startDate = $AdEvent->getStartDate();
     $AdEvent_endDate = $AdEvent->getEndDate();
     $AdEvent_description = $AdEvent->getDescription();
-    $AdEvent_type = $AdEvent->getType();
+
 
     //Updates row in the adevent table where the event_code in table matches the Event Code provided by the user
-    $query = "UPDATE adevent SET name ='$AdEvent_name',start_date = '$AdEvent_startDate', end_date = '$AdEvent_endDate', description = '$AdEvent_description', type='$AdEvent_type' WHERE event_code = {$AdEvent_eventCode}";
+    $query = "UPDATE adevent SET name ='$AdEvent_name',start_date = '$AdEvent_startDate', end_date = '$AdEvent_endDate', description = '$AdEvent_description' WHERE event_code = {$AdEvent_eventCode}";
 
     //Alerts user that the Event has been updated
     echo '<script>alert("Ad Event has been updated")</script>';

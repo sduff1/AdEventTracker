@@ -3,7 +3,7 @@
 require ('configuration/database.php');
 
 //Needs the item.php to create Item object
-require ('item.php');
+require ('Item.php');
 
 /**
  * Method to get data in HTML form (addItemForm.php) is post
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
 
 
     //Create Item object from data collected
-    $product = new Item("$number", "$description", "$category", "$department", "$cost", "$retail_cost", NULL);
+    $product = new Item("$number", "$description", "$category", "$department", "$cost", "$retail_cost");
 
 
     //Getter methods to retrieve properties of the Object created
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])) {
         echo'<script>alert("Could not add Item! Item is already in system.")</script>';
     }else{
         //If there is no row, then it will process the query
-        $query = "INSERT INTO produce.item(item_number, item_description, category, department_name,purchase_cost, full_retail_price, promocode) VALUES('$item_num', '$item_desc','$item_cat','$item_dept', '$item_cost','$item_rtl_cost', NULL)";
+        $query = "INSERT INTO produce.item(item_number, item_description, category, department_name,purchase_cost, full_retail_price) VALUES('$item_num', '$item_desc','$item_cat','$item_dept', '$item_cost','$item_rtl_cost')";
         echo '<script>alert("Item has been added!")</script>';
         if (!mysqli_query($conn, $query)){
             echo "Error: '.mysqli_error($conn)";
@@ -59,4 +59,3 @@ if(isset($_POST['submit'])) {
 
 }
 
-?>

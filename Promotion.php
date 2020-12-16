@@ -5,16 +5,14 @@ class Promotion {
     public $amountOff;
     public $type;
     public $code;
-    public $event;
 
-    public function __construct($name,$description,$amountOff,$type,$code,$event)
+    public function __construct($name,$description,$amountOff,$type,$code)
     {
         $this->name=$name;
         $this->description=$description;
         $this->amountOff=$amountOff;
         $this->type=$type;
         $this->code=$code;
-        $this->event=$event;
 
     }
 
@@ -66,15 +64,6 @@ class Promotion {
     public function setCode($code): void
     {
         $this->code = $code;
-    }
-    public function getEvent()
-    {
-        return $this->event;
-    }
-
-    public function setEvent($event): void
-    {
-        $this->event = $event;
     }
 
 

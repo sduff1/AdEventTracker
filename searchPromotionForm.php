@@ -7,11 +7,6 @@ require('includes/header.php');
  */
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +16,7 @@ require('includes/header.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search for a Promotion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/backdrop.css">
 </head>
 <body>
 <div class ="container">
@@ -31,10 +27,17 @@ require('includes/header.php');
 
         <form method="POST" action="searchPromotionForm.php">
 
-            <label>Enter the name of the Promotion you wish to search</label>
-            <input type = "text" name="name" class="form-control">
+            <h5>Enter the Promotion Code, Name, and/or Description of the Promotion.</h5>
+            <label>Promotion Code:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="code">
+            <p></p>
 
+            <label>Name:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="name">
+            <p></p>
 
+            <label>Description:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="description">
             <p></p>
 
             <input type="submit" name="submit" value="Submit" class="btn btn-primary">
@@ -42,7 +45,37 @@ require('includes/header.php');
         </form>
     </div>
 </div>
-<?php require ('searchPromotion.php')?>
+<div class ="container">
+
+    <div class="form-group">
+
+        <h1>Search for an Ad Event</h1>
+
+        <form method="POST" action="searchPromotionForm.php">
+
+            <h5>Enter the Event Code, Date Range, Name and/or Description of the Ad Event.</h5>
+            <label>Event Code:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="event_code">
+            <p></p>
+
+            <label>Date Range:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="date_range">
+            <p></p>
+
+            <label>Name:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="event_name">
+            <p></p>
+
+            <label>Description:</label>
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="event_description">
+            <p></p>
+
+            <input type="submit" name="submit2" value="Submit" class="btn btn-primary">
+
+        </form>
+    </div>
+</div>
+<?php require('searchPromotion.php') ?>
 
 
 </body>

@@ -44,9 +44,6 @@ require('UpdatePromotion.php');
             <label>Type:</label>
             <input type = "text" name="type" class="form-control">
 
-            <label>Event:</label>
-            <input type = "text" name="event" class="form-control">
-
             <p></p>
 
             <input type="submit" name="submit" value="Submit" class="btn btn-danger">

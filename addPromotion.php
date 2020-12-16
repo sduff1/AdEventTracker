@@ -21,10 +21,9 @@ if(isset($_POST['submit'])) {
     $aOff = mysqli_real_escape_string($conn, $_POST['amountOff']);
     $type = mysqli_real_escape_string($conn, $_POST['type']);
     $code = mysqli_real_escape_string($conn, $_POST['code']);
-    $event = mysqli_real_escape_string($conn, $_POST['event']);
 
     //Create Item object from data collected
-    $product = new Promotion("$name", "$description", "$aOff", "$type", "$code", "$event");
+    $product = new Promotion("$name", "$description", "$aOff", "$type", "$code");
 
 
     //Getter methods to retrieve properties of the Object created
@@ -33,7 +32,6 @@ if(isset($_POST['submit'])) {
     $paOff = $product->getAmountOff();
     $ptype= $product->getType();
     $pcode = $product->getCode();
-    $pevent = $product->getEvent();
 
     //Get the elements from item_number column from item table, that matches the number provided by the user in the Item Number field of addItemForm.php
     $check = mysqli_query($conn,"SELECT * from promotion WHERE Name='$pname'");
@@ -47,13 +45,13 @@ if(isset($_POST['submit'])) {
         echo'<script>alert("Could not add Item! Item is already in system.")</script>';
     }else{
         //If there is no row, then it will process the query
-        $query = "INSERT INTO promotion(Name, Description, AmountOff, Type, Code, Event) VALUES('$pname', '$pdesc','$paOff','$ptype', '$pcode', '$pevent')";
+        $query = "INSERT INTO promotion(Name, Description, AmountOff, PromoType, PromoCode) VALUES('$pname', '$pdesc','$paOff','$ptype', '$pcode')";
         echo '<script>alert("Promotion has been added!")</script>';
-        if (!mysqli_query($conn, $query)){
-            echo "Error: '.mysqli_error($conn)";
-        }
+    }
+
+    if (!mysqli_query($conn, $query)){
+        echo "Error: '.mysqli_error($conn)";
     }
 
 }
 
-?>

@@ -15,7 +15,22 @@ require('includes/header.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add an Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="css/backdrop.css">
+    <script type = "text/javascript">
+        // Form validation for the following fields will come below ex. number,description etc.
+        function tvalidate() {
+//Only including validation for an empty item number because it is the only necessary one to start with..
+            if (document.myForm.number.value == "") {
+                alert("Please provide the item number!");
+                document.myForm.number.focus();
+                return false;
+            }
+
+            return (true);
+        }
+
+    </script>
+    </head>
 
 <body>
 <div class ="container">
@@ -24,10 +39,10 @@ require('includes/header.php');
 
         <h1>Search for an Item</h1>
 
-        <form method="POST" action="searchItemForm.php">
+        <form method="POST" action="searchItemForm.php" name ="myForm" onsubmit = "return(tvalidate());">
 
             <label>Enter the Item Number of Item</label>
-            <input type = "text" name="number-search" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="number-search">
 
             <p></p>
             <input type="submit" name="submit" value="Submit" class="btn btn-primary">
@@ -35,7 +50,7 @@ require('includes/header.php');
         </form>
     </div>
 </div>
-<?php require ('searchItem.php')?>
+        <?php require ('searchItem.php')?>
 
 </body>
 

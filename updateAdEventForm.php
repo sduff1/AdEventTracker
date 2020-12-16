@@ -19,6 +19,21 @@ require('updateAdEvent.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Update Ad Event</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script type = "text/javascript">
+        // Form validation for the following fields will come below ex. number,description etc.
+        function vvalidate() {
+
+            if (document.myForm.event_code.value == "") {
+                alert("Please provide the event code!");
+                document.myForm.event_code.focus();
+                return false;
+            }
+
+            return (true);
+        }
+    </script>
+
 </head>
 <body>
 <div class ="container">
@@ -27,25 +42,30 @@ require('updateAdEvent.php');
 
         <h1>Update Ad Event</h1>
 
-        <form method="POST" action="updateAdEventForm.php">
+        <form method="POST" action="updateAdEventForm.php" name ="myForm" onsubmit = "return(vvalidate());">
 
             <label>Enter Event Code of the Event You Wish To Update</label>
-            <input type = "text" name="event_code" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="event_code">
+            <p></p>
 
             <label>Name:</label>
-            <input type = "text" name="name" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="name">
+            <p></p>
 
             <label>Start Date:</label>
-            <input type = "text" name="start_date" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="start_date">
+            <p></p>
 
             <label>End Date:</label>
-            <input type = "text" name="end_date" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="end_date">
+            <p></p>
 
             <label>Description:</label>
-            <input type = "text" name="description" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="description">
+            <p></p>
 
             <label>Type:</label>
-            <input type = "text" name="type" class="form-control">
+            <input class ="form-control form-control-sm col-md-4" type = "text" name="type">
 
             <p></p>
 
