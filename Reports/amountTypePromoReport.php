@@ -34,7 +34,7 @@ require('../includes/header.php');
             <p></p>
 
             <label>Type:</label>
-            <select name="type" id="type">
+            <select name="promotype" id="promotype">
                 <option value="Dollar">Dollar</option>
                 <option value="Percent">Percent</option>
             </select>

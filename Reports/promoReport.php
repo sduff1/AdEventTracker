@@ -13,10 +13,10 @@ if(isset($_POST['submit'])) {
     $promoType = mysqli_real_escape_string($conn, $_POST['promotype']);
     /*$description = mysqli_real_escape_string($conn, $_POST['description']);*/
 
-        $query = "SELECT * FROM promotion WHERE PromoCode = '$amountOff'";
+        $query = "SELECT * FROM promotion WHERE AmountOff = '$amountOff'";
 
     /*if($code == null) {*/
-        $query = "SELECT * FROM promotion WHERE Name = '$promoType'";
+        $query = "SELECT * FROM promotion WHERE PromoType = '$promoType'";
 
        /* if($name == null){
             $query = "SELECT * FROM promotion WHERE Description = '$description'";
