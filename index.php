@@ -24,9 +24,7 @@
             <div class="col">
                 <h1 id = "title" class="mt-sm-5 font-weight-bold text-light">Ad Event Tracker </h1>
                 <hr class="hr-light">
-                <h6 class="mb-4 text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
-                    dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
-                    iste.</h6>
+                <h5 class="mb-4 text-light">Welcome to the Ad Event Tracker! Click one of the links above to get started.</h5>
             </div>
         </div>
     </div>
