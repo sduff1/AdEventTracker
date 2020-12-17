@@ -58,13 +58,18 @@
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="searchItemForm.php"><i class="fas fa-search"></i> Search Items and add it to Promotions</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Search
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="searchItemForm.php"><i class="fas fa-search"></i> Search Items and Add it to Promotions</a>
+
+                    <a class="dropdown-item" href="searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotions and Add it to Ad Events</a>
+
+                </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="searchPromotionForm.php"><i class="fas fa-search"></i> Search Promotions and add it to Ad Events</a>
-            </li>
 
 
             <li class="nav-item">
