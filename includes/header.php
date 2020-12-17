@@ -74,6 +74,13 @@
                 <a class="nav-link" href="adEventViewerForm.php"><i class="fas fa-search"></i> Ad Event Viewer</a>
             </li>
 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="amountTypePromoReport.php"><i class="fas fa-search"></i> Amount Off & Type of Promo Report</a>
+                </div>
+            </li>
+
         </ul>
     </div>
 </nav>

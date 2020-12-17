@@ -1,8 +1,8 @@
 <?php
 //Need the connection to the server and database which is why it requires database.php
-require('configuration/database.php');
-require('AdEvent.php');     /*Might not need*/
-require('Promotion.php');
+require('../configuration/database.php');
+require('../AdEvent.php');     /*Might not need*/
+require('../Promotion.php');
 
 //session_start();
 
@@ -13,15 +13,7 @@ if(isset($_POST['submit'])) {
     $promoType = mysqli_real_escape_string($conn, $_POST['promotype']);
     /*$description = mysqli_real_escape_string($conn, $_POST['description']);*/
 
-        $query = "SELECT * FROM promotion WHERE AmountOff = '$amountOff'";
-
-    /*if($code == null) {*/
-        $query = "SELECT * FROM promotion WHERE PromoType = '$promoType'";
-
-       /* if($name == null){
-            $query = "SELECT * FROM promotion WHERE Description = '$description'";
-        }*/
-    /*If stmnt}*/
+        $query = "SELECT * FROM promotion WHERE AmountOff = '$amountOff' AND PromoType = '$promoType'";
 
     $result = mysqli_query($conn,$query);
 
@@ -44,7 +36,7 @@ if(isset($_POST['submit'])) {
         echo "No matching Promotions were found.";
     }
 
-    require('searchPromotionTable.php');
+    require('../searchPromotionTable.php');
 }
 
 
