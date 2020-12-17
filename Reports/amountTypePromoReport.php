@@ -1,6 +1,6 @@
 <?php
 require('../configuration/database.php');
-require('../includes/header.php');
+require('reportsHeader.php');
 
 /**
  *HTML file to accept user form data give a report after
